@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BlaBlaCart | Premium footware</title>
+    <link rel="stylesheet" href="/scss/main.css" />
+    <link rel="stylesheet" href="/scss/utility-styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .section-header {
+        background-color: rgba(232, 223, 196, 0.9);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 50px 0;
+        color: rgba(39, 44, 38, 1);
+        text-align: center;
+
+        margin: 3rem 0;
+        padding: 2rem 1rem;
+      }
+
+      .section-header h2 {
+        font-size: 3.4rem;
+        padding-bottom: 30px;
+      }
+      .section-header h3 {
+        font-size: 2.4rem;
+        padding-bottom: 30px;
+        font-weight: normal;
+      }
+
+      .section-header div {
+        font-size: 1.25rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1rem;
+      }
+      @media screen and (max-width: 600px) {
+        .section-header div {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+      #btn {
+        outline: none;
+        border: none;
+        background-color: rgba(39, 44, 38, 1);
+        color: rgba(232, 223, 196, 0.9);
+
+        padding: 1rem 2rem;
+        border-radius: 4rem;
+        cursor: pointer;
+        font-size: 1rem;
+      }
+      #demo {
+        padding: 1rem 0;
+        font-size: 1.2rem;
+      }
+    </style>
+  </head>
+  <body
+    style="background: url(/images/trending-bgdark.jpg) center center/cover"
+  >
+    <nav class="nav-bar">
+      <div class="container">
+        <div class="logo">
+          <h2><a href="/index.html">BlaBlaCart</a></h2>
+        </div>
+        <div class="actions">
+          <ul>
+            <li class="wishlist">
+              <img src="/icons/heart-empty.png" alt="Cart" />
+            </li>
+            <!-- ? Cart icon -->
+            <li class="cart">
+              <div></div>
+              <img src="/icons/cart32px.png" alt="Cart" id="cart-qty" />
+            </li>
+            <!-- ? Profile icon -->
+            <li class="profile">
+              <img src="/icons/profile32px.png" alt="profile image" />
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      <header class="section-header" id="gallery">
+        <h2>Locate BlaBlaCart stores near you!</h2>
+        <h3>
+          BlaBlaCart has 380+ stores across India to get you the most premium
+          soles to rest your feet on.
+        </h3>
+        <div class="columns">
+          <p>
+            This area will ask the user for their current location and will help
+            them find the nearest BlaBlaCart stores to shop from. This location
+            details will be kept secure and will be destroyed once the server
+            sends the request to maintain customer privacy.
+          </p>
+          <p>
+            GeoLocation API is used for this purpose. Once we fetch the latitude
+            and longitude of our online customer, we can run our location finder
+            algorithms on the data to return their nearest store and can
+            additionally use google maps API to shoe them a route to reach to
+            the store along with contact details.
+          </p>
+        </div>
+        <p>
+          GeoLocation API is free to use but to maintain security we may keep
+          the user data secure in our own channels.
+        </p>
+        <button id="btn">Locate now</button>
+        <p id="demo">update here</p>
+      </header>
+    </div>
+  </body>
+  <script src="geoScript.js"></script>
+</html>

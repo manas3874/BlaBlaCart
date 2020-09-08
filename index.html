@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BlaBlaCart | Premium footware</title>
+    <link rel="stylesheet" href="/scss/main.css" />
+    <link rel="stylesheet" href="/scss/utility-styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- ! Navbar -->
+    <!-- ? Logo -->
+    <nav class="nav-bar">
+      <div class="container">
+        <div class="logo">
+          <h2><a href="/index.html">BlaBlaCart</a></h2>
+        </div>
+        <div class="actions">
+          <ul>
+            <li class="wishlist">
+              <img src="/icons/heart-empty.png" alt="Cart" />
+            </li>
+            <!-- ? Cart icon -->
+            <li class="cart">
+              <div></div>
+              <img src="/icons/cart32px.png" alt="Cart" id="cart-qty" />
+            </li>
+            <!-- ? Profile icon -->
+            <li class="profile">
+              <img src="/icons/profile32px.png" alt="profile image" />
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ! Showcase actions -->
+    <div class="showcase-actions">
+      <div class="showcase-buttons">
+        <a href="#category-list" class="shop-online">Shop online</a>
+        <a href="/geoLocation.html" class="locate-us" target="_blank"
+          >Locate us</a
+        >
+        <a href="/trending.html" class="trending" id="trending" target="_blank"
+          >What's trending?</a
+        >
+      </div>
+    </div>
+    <!-- ! Cart modal -->
+
+    <div class="modal-container" id="cart-modal">
+      <!-- ? Modal box container -->
+      <div class="modal-bg-cart">
+        <div class="modal-content" id="modal-cart">
+          <!-- ? Content of the modal box -->
+          <!-- <div class="cart-card">
+            <div class="product-image">
+              <img src="/images/image-1.jpg" alt="" />
+            </div>
+            <div class="details-flex">
+              <p>Product name</p>
+              <div class="quantity">
+                <p>Qty</p>
+                <input type="number" id="quantity" min="1" max="7" value="2" />
+              </div>
+            </div>
+            <div class="actions-flex">
+              <p class="price">$&nbsp;<span>200</span></p>
+              <img src="/icons/trash.png" alt="remove" id="remove" />
+            </div>
+          </div> -->
+
+          <!-- ! Checkout buttons -->
+          <div class="checkout">
+            <div class="total-price">
+              <p>$&nbsp;<span id="checkout-price">Cart empty... </span></p>
+            </div>
+            <div class="buy-now-btn"><a href="/checkout.html">Buy now!</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ! Wishlist modal -->
+    <div class="modal-container" id="wishlist-modal">
+      <!-- ? Modal box container -->
+      <div class="modal-bg-wishlist">
+        <div class="modal-content" id="modal-wishlist">
+          <!-- ? Content of the modal box -->
+          <!-- <div class="wishlist-card">
+            <div class="product-image">
+              <img src="/images/image-1.jpg" alt="" />
+            </div>
+            <div class="details-flex">
+              <p class="name">Product name</p>
+              
+              <p class="price">$<span>&nbsp;200</span></p>
+            </div>
+            <div class="actions-flex">
+              <img src="/icons/cart32px.png" alt="save for later" />
+              <img src="/icons/trash.png" alt="remove" id="remove" />
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </div>
+    <!-- ! Welcome page -->
+    <section class="showcase">
+      <h1>Dress yourself</h1>
+      <h3>From ground up</h3>
+    </section>
+
+    <!-- ! Product display modal -->
+
+    <section class="product-modal">
+      <div class="modal-bg">
+        <!-- ? position fixed -->
+        <div class="modal-content">
+          <!--? position relative -->
+          <div class="product-display-grid">
+            <div class="product-listing">
+              <div class="name"><p id="modal-name">Product name</p></div>
+              <img src="./images/image-1.jpg" alt="" />
+              <div class="call-to-action">
+                <p class="price" id="modal-listing-price">
+                  $&nbsp;<span id="modal-price">499</span>
+                </p>
+                <div id="cart-btn">
+                  <a href="">Add to cart</a>
+                </div>
+              </div>
+            </div>
+            <div class="description">
+              <p>
+                Lorem, ipsum dolor sit amet con sectetur adipi sicing elit.
+                Accusa mus corrupti dolore distinction asperiores vitae facere?
+              </p>
+            </div>
+          </div>
+          <div class="product-display-grid"></div>
+          <button class="close">x</button>
+          <!-- ? position absolute -->
+        </div>
+      </div>
+    </section>
+
+    <section class="shopping-grid">
+      <!-- ! Aside -->
+      <!-- ? Category list -->
+      <div class="category-list" id="category-list">
+        <ul>
+          <li class="category-item category-item-1"><a href="">Men's</a></li>
+          <li class="category-item category-item-2"><a href="">Women's</a></li>
+          <li class="category-item category-item-3"><a href="">Kid's</a></li>
+          <li class="category-item category-item-4">
+            <a href="">Adventure</a>
+          </li>
+          <li class="category-item category-item-5"><a href="">Work</a></li>
+          <li class="category-item category-item-6"><a href="">Casual</a></li>
+          <li class="category-item category-item-7">
+            <a href="">Designer</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- ! Main grid -->
+
+      <div class="product-flex">
+        <!-- ? Horizontal title of category and filter/sort icons -->
+        <div class="category-bar">
+          <div class="category-title">Men's Footware</div>
+          <div class="filter-and-sort">
+            <div class="filter">filter icon</div>
+            <div class="sort">sort icon</div>
+          </div>
+        </div>
+        <!-- ? Grid of products -->
+        <div class="product-grid" id="product-grid">
+          <!-- ? Product cards -->
+          <div class="product-card product-card-1">
+            <div class="card-grid">
+              <div class="product-interactions">
+                <img src="/icons/heart-empty.png" alt="" class="wishlist-btn" />
+                <p>Best seller</p>
+              </div>
+
+              <img src="./images/image-1.jpg" alt="" />
+              <div class="details">
+                <p id="name">Product 1 name</p>
+                <div class="call-to-action">
+                  <p class="price">$&nbsp;<span id="price-">499</span></p>
+                  <div class="cart-btn"><a href="">Add to cart</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="product-card product-card-2">
+            <div class="card-grid">
+              <div class="product-interactions">
+                <img src="/icons/heart-empty.png" alt="" class="wishlist-btn" />
+
+                <p>Best seller</p>
+              </div>
+              <img src="./images/image-2.jpg" alt="" />
+              <div class="details">
+                <p id="name">Product 2 name</p>
+                <div class="call-to-action">
+                  <p class="price">$&nbsp;<span id="price-">400</span></p>
+                  <div class="cart-btn"><a href="">Add to cart</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="product-card product-card-3">
+            <div class="card-grid">
+              <div class="product-interactions">
+                <img src="/icons/heart-empty.png" alt="" class="wishlist-btn" />
+                <p>Best seller</p>
+              </div>
+              <img src="./images/image-3.jpg" alt="" />
+              <div class="details">
+                <p id="name">Product 3 name</p>
+                <div class="call-to-action">
+                  <p class="price">$&nbsp;<span id="price-">210</span></p>
+                  <div class="cart-btn"><a href="">Add to cart</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="product-card product-card-4">
+            <div class="card-grid">
+              <div class="product-interactions">
+                <img src="/icons/heart-empty.png" alt="" class="wishlist-btn" />
+                <p>Best seller</p>
+              </div>
+              <img src="./images/image-4.jpg" alt="" />
+              <div class="details">
+                <p id="name">Product 4 name</p>
+                <div class="call-to-action">
+                  <p class="price">$&nbsp;<span id="price-">290</span></p>
+                  <div class="cart-btn"><a href="">Add to cart</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="product-card product-card-5">
+            <div class="card-grid">
+              <div class="product-interactions">
+                <img src="/icons/heart-empty.png" alt="" class="wishlist-btn" />
+                <p>Best seller</p>
+              </div>
+              <img src="./images/image-5.jpg" alt="" />
+              <div class="details">
+                <p id="name">Product 5 name</p>
+                <div class="call-to-action">
+                  <p class="price">$&nbsp;<span id="price-">200</span></p>
+                  <div class="cart-btn"><a href="">Add to cart</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="product-card product-card-6">
+            <div class="card-grid">
+              <div class="product-interactions">
+                <img src="/icons/heart-empty.png" alt="" class="wishlist-btn" />
+                <p>Best seller</p>
+              </div>
+              <img src="./images/image-6.jpg" alt="" />
+              <div class="details">
+                <p id="name">Product 6 name</p>
+                <div class="call-to-action">
+                  <p class="price">$&nbsp;<span id="price-">200</span></p>
+                  <div class="cart-btn"><a href="">Add to cart</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="product-card product-card-7">
+            <div class="card-grid">
+              <div class="product-interactions">
+                <img src="/icons/heart-empty.png" alt="" class="wishlist-btn" />
+                <p>Best seller</p>
+              </div>
+              <img src="./images/image-7.jpg" alt="" />
+              <div class="details">
+                <p id="name">Product 7 name</p>
+                <div class="call-to-action">
+                  <p class="price">$&nbsp;<span id="price-">200</span></p>
+                  <div class="cart-btn"><a href="">Add to cart</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="product-card product-card-7">
+            <div class="card-grid">
+              <div class="product-interactions">
+                <img src="/icons/heart-empty.png" alt="" class="wishlist-btn" />
+                <p>Best seller</p>
+              </div>
+              <img src="./images/image-7.jpg" alt="" />
+              <div class="details">
+                <p id="name">Product 8 name</p>
+                <div class="call-to-action">
+                  <p class="price">$&nbsp;<span id="price-">200</span></p>
+                  <div class="cart-btn"><a href="">Add to cart</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ! Footer -->
+    <footer class="nav-bar">
+      <div class="container">
+        <div class="logo">
+          <h2><a href="/index.html">BlaBlaCart</a></h2>
+        </div>
+        <div class="actions">
+          <ul>
+            <li class="wishlist">
+              <img src="/icons/heart-empty.png" alt="Cart" />
+            </li>
+            <!-- ? Cart icon -->
+            <li class="cart">
+              <div></div>
+              <img src="/icons/cart32px.png" alt="Cart" id="cart-qty" />
+            </li>
+            <!-- ? Profile icon -->
+            <li class="profile">
+              <img src="/icons/profile32px.png" alt="profile image" />
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script src="/cart.js"></script>
+  <script src="/modal-script.js"></script>
+  <script src="/wishlist.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</html>

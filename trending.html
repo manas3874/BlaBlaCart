@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BlaBlaCart | Premium footware</title>
+    <link rel="stylesheet" href="/scss/main.css" />
+    <link rel="stylesheet" href="/scss/utility-styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- ! Styling -->
+    <style>
+      body {
+        background: url(/images/trending-bgdark.jpg) center center/cover;
+      }
+
+      .gallery-preview img {
+        max-width: 100%;
+        max-height: 100%;
+        /* object-fit: cover; */
+      }
+      .gallery-preview img:hover {
+        /* box-shadow: 0 1px 0 0 red; */
+        box-shadow: 0px 0px 45px black;
+        /* box-shadow: -10px -10px 5px black; */
+
+        /* box-shadow: outside 10px 10px 10px 10px black; */
+      }
+
+      .section-header {
+        background-color: rgba(232, 223, 196, 0.9);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 50px 0;
+        color: rgba(39, 44, 38, 1);
+        text-align: center;
+
+        margin: 7rem 0 0 0;
+        padding: 2rem 1rem;
+      }
+      .section-header h2 {
+        font-size: 3.4rem;
+        padding-bottom: 30px;
+      }
+      .section-header h3 {
+        font-size: 2.4rem;
+        padding-bottom: 30px;
+        font-weight: normal;
+      }
+
+      .section-header div {
+        font-size: 1.25rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1rem;
+      }
+
+      .flex-grid .row {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 5px;
+      }
+
+      .flex-grid .column {
+        flex: 25%;
+        padding: 0 5px;
+      }
+
+      #trending input[type="submit"] {
+        outline: none;
+        border: none;
+        background-color: rgba(39, 44, 38, 1);
+        color: rgba(232, 223, 196, 0.9);
+
+        padding: 1rem 2rem;
+        border-radius: 4rem;
+        cursor: pointer;
+      }
+      @media screen and (max-width: 600px) {
+        .section-header div {
+          display: flex;
+          flex-direction: column;
+        }
+        .flex-grid .row {
+          display: flex;
+          flex-direction: column;
+          padding: 0 5px;
+        }
+
+        .flex-grid .column {
+          flex: 100%;
+          padding: 0 5px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="nav-bar">
+      <div class="container">
+        <div class="logo">
+          <h2><a href="/index.html">BlaBlaCart</a></h2>
+        </div>
+        <div class="actions">
+          <ul>
+            <li class="wishlist">
+              <img src="/icons/heart-empty.png" alt="Cart" />
+            </li>
+            <!-- ? Cart icon -->
+            <li class="cart">
+              <div></div>
+              <img src="/icons/cart32px.png" alt="Cart" id="cart-qty" />
+            </li>
+            <!-- ? Profile icon -->
+            <li class="profile">
+              <img src="/icons/profile32px.png" alt="profile image" />
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      <section
+        class="gallery-preview flex-grid section-bg"
+        id="mobile-mode-gallery"
+      >
+        <header class="section-header" id="gallery">
+          <h2>Know what's trending this season</h2>
+          <h3>
+            Trends keep changing and so does the fashion. Stay up to date with
+            your friends and people around you.
+          </h3>
+          <div class="columns">
+            <p>
+              This represents the use of Instagram Graph API in order to fetch
+              recently liked/tagged/hashtagged/posted images/videos related to
+              our product line.
+            </p>
+            <p>
+              Users will be able to find out what their friends are liking
+              currently since the users link their social media platforms
+              (mainly facebook) which will allow us to make required queries to
+              the FB/IG graph APIs.
+            </p>
+          </div>
+          <p>
+            I was unable to acquire their API key in this short duration, hence
+            I have achieved the same using PexelsAPI with a hardcoded query to
+            "Shoes"
+          </p>
+          <form id="trending">
+            <input type="submit" value="Search Photos" />
+          </form>
+        </header>
+        <div class="row">
+          <div class="column">
+            <img src="./images/gallery-6.jpg" alt="" id="image-1" />
+            <img src="./images/gallery-2.jpg" alt="" id="image-2" />
+            <img src="./images/gallery-11.jpg" alt="" id="image-3" />
+            <img src="./images/gallery-5.jpg" alt="" id="image-7" />
+          </div>
+          <div class="column">
+            <img src="./images/gallery-3.jpg" alt="" id="image-4" />
+            <img src="./images/gallery-4.jpg" alt="" id="image-5" />
+            <img src="./images/gallery-9.jpg" alt="" id="image-6" />
+            <img src="./images/gallery-9.jpg" alt="" id="image-13" />
+            <img src="./images/gallery-9.jpg" alt="" id="image-17" />
+          </div>
+          <div class="column">
+            <img src="./images/gallery-1.jpg" alt="" id="image-8" />
+            <img src="./images/gallery-10.jpg" alt="" id="image-9" />
+            <img src="./images/gallery-11.jpg" alt="" id="image-16" />
+            <img src="./images/gallery-11.jpg" alt="" id="image-14" />
+            <img src="./images/gallery-11.jpg" alt="" id="image-18" />
+          </div>
+          <div class="column">
+            <img src="./images/gallery-7.jpg" alt="" id="image-10" />
+            <img src="./images/gallery-8.jpg" alt="" id="image-11" />
+            <img src="./images/gallery-12.jpg" alt="" id="image-12" />
+            <img src="./images/gallery-12.jpg" alt="" id="image-15" />
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+  <!-- ! Scripting -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <script>
+    var photoUrls;
+    var pexels = $("#trending"),
+      photos,
+      photo;
+    pexels.submit(function (ev) {
+      ev.preventDefault();
+      var searchText = "shoes";
+      var url =
+        "https://api.pexels.com/v1/search?query=" + searchText + "&per_page=20";
+      $.ajax({
+        beforeSend: function (xhr) {
+          xhr.setRequestHeader(
+            "Authorization",
+            "563492ad6f91700001000001f2545aa856e843a4bc6e2e62ae9b4748"
+          );
+        },
+        method: "GET",
+        url: url,
+        success: function (data) {
+          photos = data.photos;
+          // console.log(data);
+          for (let i = 0; i < photos.length; i++) {
+            photoUrl = photos[i].src.original;
+            // photoUrls.push(photoUrl);
+            document
+              .getElementById("image-" + (i + 1))
+              .setAttribute("src", photoUrl);
+          }
+        },
+      });
+    });
+  </script>
+</html>
