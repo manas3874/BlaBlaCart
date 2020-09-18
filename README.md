@@ -1,4 +1,4 @@
-# BlaBlaCart
+# BlaBlaCart (work in progress)
 A simple shopping web-app for a premium footware company.
 
 # Important information
